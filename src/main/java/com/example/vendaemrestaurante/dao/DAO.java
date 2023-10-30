@@ -1,4 +1,4 @@
-package com.feijaopreto.cadastroclientes.database.dao;
+package com.example.vendaemrestaurante.dao;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.feijaopreto.cadastroclientes.database.conexao;
+package com.example.vendaemrestaurante.database.connection;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,9 +6,9 @@ import java.sql.SQLException;
 
 public class Conexao {
     final private static String host = "localhost";
-    final private static String database = "apsoo";
+    final private static String database = "venda_em_restaurante";
     final private static String username = "root";
-    final private static String password =  "";
+    final private static String password =  "admin";
 
     public static Connection abreConexao() {
         String urlConexao = "jdbc:mysql://" + host + "/" + database;
