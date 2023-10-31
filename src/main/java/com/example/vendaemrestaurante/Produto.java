@@ -1,25 +1,31 @@
 package com.example.vendaemrestaurante;
 
+import java.sql.Date;
+
 public class Produto {
 
-    private String tipo;
-    private String nome;
+    private int id;
     private String codigo;
-    private double preco;
+    private String descricao;
+    private String categoria;
+    private double valor;
+    private Date dataValidade;
 
-    public Produto(String nome, String codigo, double preco, String tipo) {
-        this.nome = nome;
-        this.codigo = codigo;
-        this.preco = preco;
-        this.tipo = tipo;
+    public Produto(int id, String descricao, String codigo, double valor, String categoria, Date dataValidade) {
+        setId(id);
+        setDescricao(descricao);
+        setCodigo(codigo);
+        setValor(valor);
+        setCategoria(categoria);
+        setDataValidade(dataValidade);
     }
 
-    public String getNome() {
-        return nome;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     public String getCodigo() {
@@ -30,28 +36,40 @@ public class Produto {
         this.codigo = codigo;
     }
 
-    public double getPreco() {
-        return preco;
+    public double getValor() {
+        return valor;
     }
 
-    public void setPreco(double preco) {
-        this.preco = preco;
+    public void setValor(double valor) {
+        this.valor = valor;
     }
 
-    public String getTipo() {
-        return tipo;
+    public String getCategoria() {
+        return categoria;
     }
 
-    public void setTipo(String nome) {
-        this.tipo = nome;
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+    public Date getDataValidade() { return dataValidade; }
+
+    public void setDataValidade(Date dataValidade) { this.dataValidade = dataValidade; }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     @Override
     public String toString() {
         return
-                nome +" | " +
+                descricao +" | " +
                 "cod:" + codigo +" | "  +
-                "R$" + preco;
+                "R$" + valor;
 
     }
 }
